@@ -1,0 +1,92 @@
+.projects-section {
+  padding: 60px 20px;
+  /* background-color: #f9fafb; */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.projects-heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  width: "250px";
+
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 380px;
+}
+
+.project-image {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.project-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.project-description {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.project-tags {
+  margin-bottom: 12px;
+}
+
+.tag {
+  background-color: #f3f4f6;
+  color: #111827;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.project-links a {
+  margin-right: 12px;
+  font-size: 14px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
