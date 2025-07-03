@@ -143,7 +143,7 @@ function Home() {
             <p>I build clean, responsive, and interactive web apps using React.</p>
             <div className="cta-buttons">
               <a href="#projects" className="btn btn-primary">View Projects</a>
-              <a href="/resume.pdf" className="btn btn-secondary" download>Download Resume</a>
+              <a href="/resume.pdf" className="btn btn-secondary"   download="Vishal_Mahavar_Resume.pdf">Download Resume</a>
             </div>
           </motion.div>
 
