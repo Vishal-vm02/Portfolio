@@ -47,19 +47,19 @@ const Contact = () => {
                 <FaEnvelope className="contact-icon" />
                 <div>
                   <h4>Email</h4>
-                  <a href="mailto:vishal@example.com">vishal@example.com</a>
+                  <a href="mailto:mahavarvishal2112001@gmail.com">mahavarvishal2112001@gmail.com</a>
                 </div>
               </div>
             </div>
 
             <div className="social-links">
-              <a href="https://github.com/vishalmahavar" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Vishal-vm02" target="_blank" rel="noreferrer">
                 <FaGithub className="social-icon" />
               </a>
-              <a href="https://linkedin.com/in/vishalmahavar" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/vishal-mahavar-b48ab6311" target="_blank" rel="noreferrer">
                 <FaLinkedin className="social-icon" />
               </a>
-              <a href="https://twitter.com/vishalmahavar" target="_blank" rel="noreferrer">
+              <a href="#" target="_blank" rel="noreferrer">
                 <FaTwitter className="social-icon" />
               </a>
             </div>
