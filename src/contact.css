@@ -1,5 +1,8 @@
 .contact-section {
   padding: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   /* background-color: var(--light-bg); */
 }
 
@@ -10,6 +13,10 @@
   color: #111827;
   margin-bottom: 40px;
   position: relative;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .contact-container {

@@ -29,6 +29,7 @@ const Contact = () => {
       <div className="container">
 
         <div className="container">
+          <div className='col-md-6' style={{marginBottom:"10px", display:"flex", justifyContent:"center", alignItems:"center"}}>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -63,7 +64,8 @@ const Contact = () => {
               </a>
             </div>
           </motion.div>
-
+          </div>
+<div className='col-md-6'>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -85,6 +87,7 @@ const Contact = () => {
               </button>
             </form>
           </motion.div>
+          </div>
         </div>
       </div>
     </section>
