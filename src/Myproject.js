@@ -70,9 +70,24 @@ const Projects = () => {
       {/* <h2 className="projects-heading">Projects</h2> */}
 
       <div className="projects-grid container">
+        <div className="project-card">
+                    <div className="project-image" style={{padding:"5px"}}> <img src={Pet} alt="Project" /></div>
+
+          <div className="project-details">
+            <h3 className="project-title">{projects[3].title}</h3>
+            <p className="project-description">{projects[3].description}</p>
+            <div className="project-tags">
+              {projects[3].tags.map((tag, i) => <span key={i} className="tag">{tag}</span>)}
+            </div>
+            <div className="project-links">
+              <a href={projects[3].live} target="_blank" rel="noreferrer">Live Demo</a>
+              <a href={projects[3].github} target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
         {/* Project 1 */}
         <div className="project-card">
-          <div className="project-image"> <img src={Weather} alt="Project" /></div>
+          <div className="project-image" style={{padding:"5px"}}> <img src={Weather} alt="Project" /></div>
           <div className="project-details">
             <h3 className="project-title">{projects[0].title}</h3>
             <p className="project-description">{projects[0].description}</p>
@@ -88,7 +103,7 @@ const Projects = () => {
 
         {/* Project 2 */}
         <div className="project-card">
-                    <div className="project-image"> <img src={Card} alt="Project" /></div>
+                    <div className="project-image" style={{padding:"5px"}}> <img src={Card} alt="Project" /></div>
 
           <div className="project-details">
             <h3 className="project-title">{projects[1].title}</h3>
@@ -105,7 +120,7 @@ const Projects = () => {
 
         {/* Project 3 */}
         <div className="project-card">
-                    <div className="project-image"> <img src={Ex} alt="Project" /></div>
+                    <div className="project-image" style={{padding:"5px"}}> <img src={Ex} alt="Project" /></div>
 
           <div className="project-details">
             <h3 className="project-title">{projects[2].title}</h3>
@@ -121,21 +136,7 @@ const Projects = () => {
         </div>
 
         {/* Project 4 */}
-        <div className="project-card">
-                    <div className="project-image"> <img src={Pet} alt="Project" /></div>
-
-          <div className="project-details">
-            <h3 className="project-title">{projects[3].title}</h3>
-            <p className="project-description">{projects[3].description}</p>
-            <div className="project-tags">
-              {projects[3].tags.map((tag, i) => <span key={i} className="tag">{tag}</span>)}
-            </div>
-            <div className="project-links">
-              <a href={projects[3].live} target="_blank" rel="noreferrer">Live Demo</a>
-              <a href={projects[3].github} target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </div>
-        </div>
+        
 
       </div>
     </section>

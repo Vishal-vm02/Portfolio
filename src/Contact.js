@@ -64,30 +64,34 @@ const Contact = () => {
               </a>
             </div>
           </motion.div>
-          </div>
-<div className='col-md-6'>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="contact-form"
-          >
-            <form>
-              <div className="form-group">
-                <input type="text" placeholder="Your Name" required />
-              </div>
-              <div className="form-group">
-                <input type="email" placeholder="Your Email" required />
-              </div>
-              <div className="form-group">
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-              </div>
-              <button type="submit" className="submit-btn">
-                Send Message
-              </button>
-            </form>
-          </motion.div>
-          </div>
+          </div><div
+  className="col-12 col-md-6 d-flex justify-content-center align-items-center"
+  // style={{ minHeight: "100vh" }} // Optional for vertical centering
+>
+  <motion.div
+    initial={{ opacity: 0, x: 50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+    className="contact-form w-100"
+    style={{ maxWidth: "500px" }} // Keeps the form from stretching too wide
+  >
+    <form>
+      <div className="form-group">
+        <input type="text" placeholder="Your Name" required className="form-control" />
+      </div>
+      <div className="form-group">
+        <input type="email" placeholder="Your Email" required className="form-control" />
+      </div>
+      <div className="form-group">
+        <textarea placeholder="Your Message" rows="5" required className="form-control"></textarea>
+      </div>
+      <button type="submit" className="submit-btn btn btn-primary w-100">
+        Send Message
+      </button>
+    </form>
+  </motion.div>
+</div>
+
         </div>
       </div>
     </section>
