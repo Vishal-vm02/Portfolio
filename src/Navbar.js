@@ -21,7 +21,7 @@ function MainPage() {
   };
 
   const menuItems = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href: "/" },
     { name: "About Me", href: "#about" },
     { name: "My Project", href: "#projects" },
     { name: "Contact", href: "#contact" },

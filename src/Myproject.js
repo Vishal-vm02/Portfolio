@@ -1,15 +1,10 @@
 import React from "react";
 import "./Projects.css";
-import imageUrl from './img.jpg'
-import { motion } from 'framer-motion';
-import Weather from './weather.png'
-import Card from './card.png'
-import Ex from './ex3.png'
-import Pet from './pet.png'
-
-
-
-
+import { motion } from "framer-motion";
+import Weather from './weather.png';
+import Card from './card.png';
+import Ex from './ex3.png';
+import Pet from './pet.png';
 
 const projects = [
   {
@@ -18,6 +13,7 @@ const projects = [
     tags: ["React", "API", "CSS"],
     github: "https://github.com/Vishal-vm02/weather-final",
     live: "https://weather-final-iota.vercel.app/",
+    image: Weather,
   },
   {
     title: "Business Card Generator",
@@ -25,6 +21,7 @@ const projects = [
     tags: ["React", "State Management"],
     github: "https://github.com/Vishal-vm02/bussinesscard",
     live: "https://bussinesscard-an4v.vercel.app/",
+    image: Card,
   },
   {
     title: "Expense Tracker",
@@ -32,6 +29,7 @@ const projects = [
     tags: ["React", "Local Storage"],
     github: "https://github.com/Vishal-vm02/-Expense-Calculator-App",
     live: "https://expense-calculator-app-ivory.vercel.app/",
+    image: Ex,
   },
   {
     title: "Pet Heaven",
@@ -39,25 +37,27 @@ const projects = [
     tags: ["React", "Firebase", "Authentication"],
     github: "https://github.com/Vishal-vm02/pet-heaven",
     live: "https://pet-heaven-final.vercel.app/",
+    image: Pet,
   },
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: 'easeOut'
+    }
+  }),
+};
+
 const Projects = () => {
-    const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.3,
-        duration: 0.6,
-        ease: 'easeOut'
-      }
-    }),
-  };
   return (
     <section className="projects-section">
-         <motion.h2
+      <motion.h2
         className="about-title"
         initial="hidden"
         animate="visible"
@@ -67,77 +67,37 @@ const Projects = () => {
         <div className="underline" />
       </motion.h2>
 
-      {/* <h2 className="projects-heading">Projects</h2> */}
-
       <div className="projects-grid container">
-        <div className="project-card">
-                    <div className="project-image" style={{padding:"5px"}}> <img src={Pet} alt="Project" /></div>
-
-          <div className="project-details">
-            <h3 className="project-title">{projects[3].title}</h3>
-            <p className="project-description">{projects[3].description}</p>
-            <div className="project-tags">
-              {projects[3].tags.map((tag, i) => <span key={i} className="tag">{tag}</span>)}
+        {projects.map((project, index) => (
+          <motion.div
+            className="project-card"
+            key={index}
+            custom={index}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            whileHover={{ scale: 1.05, boxShadow: "0px 8px 24px rgba(0,0,0,0.2)" }}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <div className="project-image" style={{ padding: "5px" }}>
+              <img src={project.image} alt="Project" />
             </div>
-            <div className="project-links">
-              <a href={projects[3].live} target="_blank" rel="noreferrer">Live Demo</a>
-              <a href={projects[3].github} target="_blank" rel="noreferrer">GitHub</a>
+            <div className="project-details">
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+              <div className="project-tags">
+                {project.tags.map((tag, i) => (
+                  <span key={i} className="tag">{tag}</span>
+                ))}
+              </div>
+              <div className="project-links">
+                <a href={project.live} target="_blank" rel="noreferrer">Live Demo</a>
+                <a href={project.github} target="_blank" rel="noreferrer">GitHub</a>
+              </div>
             </div>
-          </div>
-        </div>
-        {/* Project 1 */}
-        <div className="project-card">
-          <div className="project-image" style={{padding:"5px"}}> <img src={Weather} alt="Project" /></div>
-          <div className="project-details">
-            <h3 className="project-title">{projects[0].title}</h3>
-            <p className="project-description">{projects[0].description}</p>
-            <div className="project-tags">
-              {projects[0].tags.map((tag, i) => <span key={i} className="tag">{tag}</span>)}
-            </div>
-            <div className="project-links">
-              <a href={projects[0].live} target="_blank" rel="noreferrer">Live Demo</a>
-              <a href={projects[0].github} target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Project 2 */}
-        <div className="project-card">
-                    <div className="project-image" style={{padding:"5px"}}> <img src={Card} alt="Project" /></div>
-
-          <div className="project-details">
-            <h3 className="project-title">{projects[1].title}</h3>
-            <p className="project-description">{projects[1].description}</p>
-            <div className="project-tags">
-              {projects[1].tags.map((tag, i) => <span key={i} className="tag">{tag}</span>)}
-            </div>
-            <div className="project-links">
-              <a href={projects[1].live} target="_blank" rel="noreferrer">Live Demo</a>
-              <a href={projects[1].github} target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Project 3 */}
-        <div className="project-card">
-                    <div className="project-image" style={{padding:"5px"}}> <img src={Ex} alt="Project" /></div>
-
-          <div className="project-details">
-            <h3 className="project-title">{projects[2].title}</h3>
-            <p className="project-description">{projects[2].description}</p>
-            <div className="project-tags">
-              {projects[2].tags.map((tag, i) => <span key={i} className="tag">{tag}</span>)}
-            </div>
-            <div className="project-links">
-              <a href={projects[2].live} target="_blank" rel="noreferrer">Live Demo</a>
-              <a href={projects[2].github} target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Project 4 */}
-        
-
+          </motion.div>
+        ))}
       </div>
     </section>
   );
