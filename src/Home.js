@@ -5,7 +5,6 @@ import About from './About';
 import Projects from './Myproject';
 import Contact from './Contact';
 import developerAnimation from './developer-lottie.json';
-// import BlurText from "./BlurText"; // Remove this if defining inline
 
 const buildKeyframes = (from, steps) => {
   const keys = new Set([
@@ -121,31 +120,33 @@ function Home() {
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row' }}>
           {/* Left: Text Content */}
           <motion.div
-            className="hero-left"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1>
-              <h1 className="text-2xl mb-8 highlight">
-  <BlurText
+          className="hero-left"
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  {/* <h5> */}
+<BlurText
     text="Hi, I'm Vishal Mahavar"
     delay={150}
     animateBy="words"
     direction="top"
-    className="inline highlight"
+    className="inline-block text-4xl font-bold mb-4"
   />
-  {/* <span className="highlight">Vishal Mahavar</span> */}
-</h1>
+  {/* </h5> */}
+  
+  
+  <h2 className="text-2xl font-semibold mb-2">Frontend & React JS Developer</h2>
+  <p className="text-gray-600 mb-4">
+    I build clean, responsive, and interactive web apps using React.
+  </p>
 
-            </h1>
-            <h2>Frontend & React JS Developer</h2>
-            <p>I build clean, responsive, and interactive web apps using React.</p>
-            <div className="cta-buttons">
-              <a href="#projects" className="btn btn-primary">View Projects</a>
-              <a href="/resume.pdf" className="btn btn-secondary"   download="Vishal_Mahavar_Resume.pdf">Download Resume</a>
-            </div>
-          </motion.div>
+  <div className="cta-buttons space-x-4">
+    <a href="#projects" className="btn btn-primary">View Projects</a>
+    <a href="/resume.pdf" className="btn btn-secondary" download="Vishal_Mahavar_Resume.pdf">Download Resume</a>
+  </div>
+</motion.div>
+
 
           {/* Right: Lottie Animation */}
           <motion.div

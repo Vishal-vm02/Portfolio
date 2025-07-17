@@ -94,3 +94,104 @@
     padding: 0 20px;
   }
 }
+
+.about-section {
+  padding: 60px 20px;
+  /* background: linear-gradient(135deg, #fef6e4 0%, #e0f2f1 50%, #f0f4f8 100%); */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+.underline {
+  height: 3px;
+  width: 80px;
+  background-color: #0077b6;
+  margin: 8px auto 0;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.about-left,
+.about-right {
+  flex: 1 1 400px;
+}
+
+.subheading {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #0077b6;
+  font-weight: bold;
+}
+
+.skill-group h4 {
+  margin: 12px 0 8px;
+  color: #222;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Shared Badge Style */
+.skill-badge {
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Technical Skills - Green tone */
+.skill-badge.tech {
+  background-color: #c8e6c9;
+  color: #1b5e20;
+}
+
+/* Soft Skills - Blue tone */
+.skill-badge.soft {
+  background-color: #bbdefb;
+  color: #0d47a1;
+}
+/* Technical Skills - Orange tone */
+.skill-badge.tech {
+  background-color: #bbdefb;  /* soft orange */
+  color: #0d47a1;             /* deep orange text */
+}
+
+.skill-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
