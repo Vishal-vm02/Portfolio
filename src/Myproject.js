@@ -5,8 +5,17 @@ import Weather from './weather.png';
 import Card from './card.png';
 import Ex from './ex3.png';
 import Pet from './pet.png';
+import Recipe from './recipe1.png';
 
 const projects = [
+  {
+    title: "Pet Heaven",
+    description: "A full-featured pet platform where users can adopt, buy, and sell pets.",
+    tags: ["React", "Firebase", "Authentication"],
+    github: "https://github.com/Vishal-vm02/pet-heaven",
+    live: "https://pet-heaven-final.vercel.app/",
+    image: Pet,
+  },
   {
     title: "Weather App",
     description: "A simple weather app using OpenWeather API to show live weather of any city.",
@@ -16,6 +25,15 @@ const projects = [
     image: Weather,
   },
   {
+    title: "Recipe Finder App",
+    description: "Recipe Finder App helps users discover tasty recipes by searching with ingredients or keywords, all in a clean, responsive design.",
+    tags: ["React", "Spoonacular API"],
+    github: "https://github.com/Vishal-vm02/Recipe-Finder-App",
+    live: "https://recipe-finder-app-fawn-omega.vercel.app/",
+    image: Recipe,
+  },
+  
+  {
     title: "Business Card Generator",
     description: "Users can create stylish digital business cards with their own branding.",
     tags: ["React", "State Management"],
@@ -23,6 +41,8 @@ const projects = [
     live: "https://bussinesscard-an4v.vercel.app/",
     image: Card,
   },
+  
+  
   {
     title: "Expense Tracker",
     description: "Track income/expenses with real-time state updates using React hooks and local storage.",
@@ -31,14 +51,7 @@ const projects = [
     live: "https://expense-calculator-app-ivory.vercel.app/",
     image: Ex,
   },
-  {
-    title: "Pet Heaven",
-    description: "A full-featured pet platform where users can adopt, buy, and sell pets.",
-    tags: ["React", "Firebase", "Authentication"],
-    github: "https://github.com/Vishal-vm02/pet-heaven",
-    live: "https://pet-heaven-final.vercel.app/",
-    image: Pet,
-  },
+  
 ];
 
 const fadeUp = {

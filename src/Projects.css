@@ -88,7 +88,7 @@
 .container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .project-card {
@@ -97,7 +97,7 @@
   border-radius: 12px;
   overflow: hidden;
   padding: 20px;
-  width: 300px;
+  width: 280px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   will-change: transform;

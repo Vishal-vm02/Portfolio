@@ -143,7 +143,7 @@ function Home() {
 
   <div className="cta-buttons space-x-4">
     <a href="#projects" className="btn btn-primary">View Projects</a>
-    <a href="/resume.pdf" className="btn btn-secondary" download="Vishal_Mahavar_Resume.pdf">Download Resume</a>
+    <a href="/Vishal_Mahavar_CV.pdf" className="btn btn-secondary" download="Vishal_Mahavar_CV.pdf">Download Resume</a>
   </div>
 </motion.div>
 
